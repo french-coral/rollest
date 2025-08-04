@@ -94,6 +94,40 @@ hr {
   margin-block: 2.5rem;
 }
 
+cours-box {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+box-cours {
+    width: 250px;
+    text-align: center;
+    background: #f7ffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 1rem;
+}
+
+image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+description {
+    margin: 1rem 0 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1.2rem;
+    background: #008884;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 /* Footer */
 footer {
   background-color: rgb(0, 136, 132);
