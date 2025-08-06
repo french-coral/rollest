@@ -7,10 +7,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: rgb(247, 255, 255); /* Secondary color */
+  background-color: rgb(246, 255, 255); /* Secondary color */
   color: #333;
   line-height: 1.6;
 }
+
 
 /* Container for centered content */
 .container {
@@ -73,8 +74,11 @@ nav a {
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  color: #88f3ea;
+  background-color: transparent; /* Remove background on hover */
+  border-radius: 0;
+  text-decoration: none;         /* Remove underline on hover */
+  box-shadow: none;
 }
 
 /* Main Content */
