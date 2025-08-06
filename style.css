@@ -127,72 +127,83 @@ hr {
 
 /* Container des cours*/
 .cours-box {
-    display: flex;
-    width: auto;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: nowrap;
-    align-items: stretch;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem; /* espace entre les lignes de cours */
 }
 
-  .box-cours {
-      width: 350px;
-      min-width: 180px;
-      max-width: 100%;
-      text-align: left;
-      background: #f7ffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px #0001;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
+.box-cours {
+  flex: 1 1 300px;
+  max-width: 400px;
+  min-width: 180px;
+  background: #f7ffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cours-title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
 
   /*Responsive sur mobile*/
-  @media (max-width: 800px) {
-    .cours-box {
-      flex-wrap: wrap;
-    }
-    .box-cours {
-      width: 90%;
-      max-width: 400px;
-    }
+@media (max-width: 800px) {
+  .cours-box {
+    flex-direction: column;
+    align-items: center;
   }
-
-  .box-cours .image {
-      width: 80%;
-      max-width: 160px;
-      height: auto;
-      border-radius: 6px;
-      margin-bottom: 0.7rem;
-      display: block;
+  .box-cours {
+    width: 90%;
+    max-width: 400px;
   }
+}
 
+.box-cours .image {
+  width: 100%;      /* Image aussi large que le contenu */
+  max-width: 100%;  /* Ne dépasse pas la box */
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
 
-  .box-cours .description {
-      margin: 0.7rem 0 0.5rem;
-      text-align: justify;
-      flex: 1;
-      width: 100%;
-  }
+.box-cours .description {
+    margin: 0.7rem 0 0.5rem;
+    text-align: justify;
+    flex: 1;
+    width: 100%;
+}
 
-  .box-cours .button {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 12px;            /* Arrondi des boutons*/
-    border-color: #00888300;
-    background-color: #008884;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: sans-serif;
-    transition: background-color 0.3s ease, text-decoration 0.3s ease;
-  }
+.box-cours .button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 12px;            /* Arrondi des boutons*/
+  border-color: #00888300;
+  background-color: #008884;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, text-decoration 0.3s ease;
+}
 
-  .box-cours .button:hover{
-    background-color: #1eccc6;
-  }
+.box-cours .button:hover{
+  background-color: #1eccc6;
+}
+
+/*Divider styling*/
+hr {
+  border: none;
+  height: 4px;
+  width: 60px;
+  background-color: rgb(0, 136, 132);
+  margin: 0.5rem auto 2rem auto; /* 0.5rem above, 2rem below */
+  border-radius: 2px;
+}
 
 /*Accordéon de la page insriptions*/
 table.accordeon-table {
@@ -281,6 +292,64 @@ table {
   td {
     text-align: left;
   }
+
+/*Lieux*/
+.lieux-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.lieu {
+  background: #f7ffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1rem;
+  max-width: 400px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+/* Maximum 2 lieux per line */
+@media (min-width: 801px) {
+  .lieux-box {
+    flex-direction: row;
+  }
+  .lieu {
+    flex-basis: calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+}
+
+/* Sur mobile, 1 lieu par ligne */
+@media (max-width: 800px) {
+  .lieu {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Adresse justifiée */
+.lieu p {
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.lieu h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.lieu iframe {
+  border-radius: 6px;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 0;
+}
 
 /*Iframe HelloAsso*/
 #haWidget {
