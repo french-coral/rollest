@@ -13,6 +13,14 @@
     <a href="index.html" class="logo-link">
     <img src="assets/logo_color_nobg.png" alt="Roll'Est Logo" class="logo-img" />
     </a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu">
+      <span class="nav-toggle-icon">&#9776;</span>
+    </button>
+    <script>
+      document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul.container').classList.toggle('open');
+      });
+    </script>
     <!-- Navigation -->
     <nav>
       <ul class="container">
