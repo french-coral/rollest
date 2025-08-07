@@ -315,19 +315,19 @@ hr {
   object-fit: cover;
 }
 
-#ecole-roller {
+#description {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
 }
 
-#ecole-roller p {
+#description p {
   width: 100%;
   text-align: justify;
 }
 
-#ecole-roller .button {
+#description .button {
   margin: 1.5rem auto 0 auto; /* Top margin, auto left/right centers it */
   display: inline-block;
   padding: 12px 24px;
@@ -341,7 +341,7 @@ hr {
   transition: background-color 0.3s ease, text-decoration 0.3s ease;
 }
 
-#ecole-roller .button:hover{
+#description .button:hover{
   background-color: #1eccc6;
 }
 
