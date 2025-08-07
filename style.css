@@ -66,6 +66,11 @@ header h1 {
   margin-right: 2rem;
   z-index: 1001;
 }
+.nav-toggle-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
 
 @media (max-width: 970px) {
   .nav-toggle {
@@ -73,14 +78,17 @@ header h1 {
     position: absolute;
     right: 1.5rem;
     top: 50%;
-    transform: translateY(-50%); /* Center vertically in header */
-    margin-right: 0;
+    transform: translateY(-50%);
     z-index: 1100;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
   header {
     position: relative;
   }
-nav ul.container {
+
+    nav ul.container {
     display: none;
     position: absolute;
     top: 60px;
@@ -89,50 +97,58 @@ nav ul.container {
     width: 320px;
     flex-direction: column;
     background: #fff;
-    padding: 0;
-    z-index: 1000;
     border-radius: 12px;
     box-shadow: 0 2px 8px #0003;
     overflow: hidden;
+    padding: 0;
+    opacity: 0;
+    transform: translate(-50%, -10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
-nav ul.container.open {
+
+  nav ul.container.open {
     display: flex;
+    opacity: 1;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
   }
+
   nav li {
     width: 100%;
-    padding: 0;
-    border-bottom: 1px solid #e0e0e0;
     display: flex;
-    align-items: center; /* Center text vertically */
+    align-items: center;         /* Vertically center the child */
+    justify-content: flex-start; /* Align items to the left */
+    border-bottom: 1px solid #e0e0e0;
   }
+
   nav li:last-child {
     border-bottom: none;
   }
+
   nav a {
-    display: block;
-    width: 100%;
-    padding: 1rem 2rem;
-    color: #222; /* Black text */
-    background: none;
-    text-align: center;
-    font-weight: bold;
-    border: none;
-    box-shadow: none;
+    flex: 1;                     /* Fills the li */
+    display: flex;
+    align-items: center;         /* Vertically center the text */
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222 !important;
+    text-align: left;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s ease, color 0.2s ease;
   }
+
   nav a:hover {
     background: #e0f7f6;
     color: #008884;
-    border-radius: 0;
-    box-shadow: none;
-    text-decoration: none;
   }
+
   nav {
     position: relative;
   }
-
 }
+
 nav {
   flex: 1; /* Navigation takes remaining space */
   display: flex;

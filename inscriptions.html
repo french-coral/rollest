@@ -7,21 +7,33 @@
         <link rel="stylesheet" href="style.css">
    </head>
    <body>
-        <header>
-            <a href="index.html" class="logo-link">
-            <img src="assets/logo_color_nobg.png" alt="Roll'Est Logo" class="logo-img" />
-            </a>
-           <!-- Navigation -->
-            <nav>
-                <ul class="container">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#les-cours">Les cours</a></li>
-                    <li><a href="index.html#les-lieux">Les lieux</a></li>
-                    <li><a href="inscriptions.html">Inscriptions</a></li>
-                </ul>
-            </nav>
-            <div class="header-spacer"></div> <!-- Permet de center la nav malgé le logo-->
-       </header>
+        <!-- Header -->
+    <header>
+        <a href="index.html" class="logo-link">
+        <img src="assets/logo_color_nobg.png" alt="Roll'Est Logo" class="logo-img" />
+        </a>
+        <a class="nav-toggle" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-icon">&#9776;</span>
+        </a>
+        <script>
+            document.querySelector('.nav-toggle').addEventListener('click', function() {
+                document.querySelector('nav ul.container').classList.toggle('open');
+            });
+        </script>
+        <!-- Navigation -->
+        <nav>
+        <ul class="container">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#les-cours">Les cours</a></li>
+            <li><a href="#les-lieux">Les lieux</a></li>
+            <li><a href="inscriptions.html">Inscriptions</a></li>
+        </ul>
+        </nav>
+        <div class="header-spacer"></div> <!-- Permet de center la nav malgé le logo-->
+
+    </header>
+
+
        <main class="container">
 
             <h1 class="title">Inscriptions</h1>
@@ -81,7 +93,7 @@
 
                 <br>
 
-                <p><a href="https://french-coral.github.io/rollest/reglement-interieur-club.html">Consulter le r&egrave;glement int&eacute;rieur du club </a></p>
+                <p><a href="reglement_interieur.html">Consulter le r&egrave;glement int&eacute;rieur du club </a></p>
 
                 <p>Pour compl&eacute;ter la licence de l&rsquo;adh&eacute;rent(e) il faudra fournir les documents suivants:</p>
                 
