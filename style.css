@@ -30,7 +30,7 @@ body {
 
 /* Header */
 header {
-  background-color: rgb(0, 136, 132);
+  background-color: #008884;
   color: white;
   padding: 0.7rem 0;   /* Header largeur*/
   display: flex;
@@ -89,11 +89,10 @@ header h1 {
   }
 
     nav ul.container {
-    display: none;
     position: absolute;
     top: 60px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-10px);
     width: 320px;
     flex-direction: column;
     background: #fff;
