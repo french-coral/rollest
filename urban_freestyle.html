@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rollest - Urban freestyle</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <a href="index.html" class="logo-link">
+            <img src="assets/logo_color_nobg.png" alt="Roll'Est Logo" class="logo-img" />
+            </a>
+
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+            <span class="nav-toggle-icon">&#9776;</span>
+            </button>
+
+            <script>
+            document.querySelector('.nav-toggle').addEventListener('click', function() {
+                document.querySelector('nav ul.container').classList.toggle('open');
+            });
+            </script>
+
+            <!-- Navigation -->
+            <nav>
+            <ul class="container">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#les-cours">Les cours</a></li>
+                <li><a href="#les-lieux">Les lieux</a></li>
+                <li><a href="inscriptions.html">Inscriptions</a></li>
+            </ul>
+            </nav>
+
+            <div class="header-spacer"></div> <!-- Permet de center la nav malrgé le logo-->
+
+        </header>
+
+        <main class="container">
+            <div class="cours">
+                <img class="image" src="assets/urban_freestyle.jpg" alt="Urban freestyle">
+                <section id="ecole-roller">
+                    <br>
+                    <h2>Urban Freestyle</h2>
+                    <hr />
+                    <p>
+                        Ce créneau s’adresse à celles et ceux qui ont déjà acquis les bases du patinage et souhaitent 
+                        <strong>approfondir leur technique</strong> 
+                        avec rigueur et précision.
+                    </p>
+                    <p>
+                        Plus exigeant que l’école de roller, cet entraînement vise à renforcer la maîtrise du patinage : 
+                        trajectoires fines, posture, gestion de la vitesse, virages précis, freinages efficaces, franchissements, etc.
+                    </p>
+                    <p>
+                        L’approche est orientée vers le 
+                        <strong>contrôle technique du geste</strong> 
+                        , la fluidité et l’efficacité en situation réelle.Il s’agit d’un travail de fond, stimulant et valorisant, pour aller plus loin dans sa pratique.
+                    </p>
+                    <p>
+                        <strong>Entrainements :</strong>
+                        <br />
+                        Les vendredis soir au&nbsp;<a href="index.html/#les-lieux">Stade d&rsquo;azieu</a> et/ou au <a href="index.html/#les-lieux">Skate Park de Genas</a>
+                    </p>
+
+                    <p>
+                        <strong>Horaires des cours :</strong>
+                        <br />
+                        18h30 &ndash; 20h00&nbsp;
+                    </p>
+
+                    <a href="inscriptions.html" class="button">S'inscrire</a>
+
+                </section>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+            <p>&copy; 2025 Roll'Est - All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

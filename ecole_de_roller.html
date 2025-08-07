@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rollest - École de roller</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <a href="index.html" class="logo-link">
+            <img src="assets/logo_color_nobg.png" alt="Roll'Est Logo" class="logo-img" />
+            </a>
+
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+            <span class="nav-toggle-icon">&#9776;</span>
+            </button>
+
+            <script>
+            document.querySelector('.nav-toggle').addEventListener('click', function() {
+                document.querySelector('nav ul.container').classList.toggle('open');
+            });
+            </script>
+
+            <!-- Navigation -->
+            <nav>
+            <ul class="container">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#les-cours">Les cours</a></li>
+                <li><a href="#les-lieux">Les lieux</a></li>
+                <li><a href="inscriptions.html">Inscriptions</a></li>
+            </ul>
+            </nav>
+
+            <div class="header-spacer"></div> <!-- Permet de center la nav malrgé le logo-->
+
+        </header>
+
+        <main class="container">
+            <div class="cours">
+                <img class="image" src="assets/edr.jpg" alt="École de roller">
+                <section id="ecole-roller">
+                    <br>
+                    <h2>École de roller</h2>
+                    <hr />
+                    <p>
+                        L’école de roller a pour objectif de rendre les <strong>jeunes et moins jeunes</strong> autonomes dans leur pratique :
+                        savoir s’équiper, se déplacer en sécurité et découvrir différentes disciplines du roller.
+                    </p>
+                    <p>
+                        Deux groupes de niveaux sont proposés (<strong>Débutant</strong> et <strong>Débrouillé</strong>) afin que chacun puisse progresser à son rythme,
+                        dans un cadre sécurisé et adapté.
+                    </p>
+                    <p>
+                        <strong>Entrainements :</strong>
+                        <br />
+                        Tous les samedis matin au&nbsp;<a href="index.html/#les-lieux">Stade d&rsquo;azieu</a>
+                    </p>
+
+                    <p>
+                        <strong>Niveau d&eacute;butant :</strong>
+                        <br />
+                        10h45 &ndash; 12h00&nbsp;
+                    </p>
+                    <p>
+                        <strong>Niveau perfectionnement :</strong>
+                        <br />
+                        9h30 &ndash; 10h45
+                    </p>
+
+                    <a href="inscriptions.html" class="button">S'inscrire</a>
+
+                </section>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+            <p>&copy; 2025 Roll'Est - All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

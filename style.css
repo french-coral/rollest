@@ -67,7 +67,7 @@ header h1 {
   z-index: 1001;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 970px) {
   .nav-toggle {
     display: block;
     position: absolute;
@@ -186,7 +186,7 @@ main h2 {
 
 main p {
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: justify;
 }
 
 .presentation-text {
@@ -297,6 +297,64 @@ hr {
   background-color: rgb(0, 136, 132);
   margin: 0.5rem auto 2rem auto; /* 0.5rem above, 2rem below */
   border-radius: 2px;
+}
+
+/*Cours styling*/
+.cours {
+  display: flex;
+  align-items: center;   /* Center image and text vertically */
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cours .image {
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#ecole-roller {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#ecole-roller p {
+  width: 100%;
+  text-align: justify;
+}
+
+#ecole-roller .button {
+  margin: 1.5rem auto 0 auto; /* Top margin, auto left/right centers it */
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 12px;            /* Arrondi des boutons*/
+  border-color: #00888300;
+  background-color: #008884;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#ecole-roller .button:hover{
+  background-color: #1eccc6;
+}
+
+/*Mobile responsive*/
+@media (max-width: 1000px) {
+  .cours {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cours .image {
+    max-width: 90vw;
+    margin-bottom: 1rem;
+  }
 }
 
 /*Accordéon de la page insriptions*/
@@ -452,7 +510,7 @@ table {
   max-width: 1100px;   /* Same as .container */
   margin: 2rem auto;   /* Center and add space above/below */
   border: none;
-  height: 2000px;      /* Adjust this value until no scroll bar appears */
+  height: 3000px;      /* Adjust this value until no scroll bar appears */
   box-sizing: border-box;
   background: #f7ffff; /* Optional: match your page background */
   border-radius: 8px;  /* Optional: match your box style */
