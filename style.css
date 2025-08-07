@@ -7,9 +7,36 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: rgb(246, 255, 255); /* Secondary color */
+  background-color: rgb(246, 255, 255);
+  /* Secondary color */
   color: #333;
   line-height: 1.6;
+}
+
+p {
+  text-align: justify;
+}
+
+/* Main Content */
+
+main {
+  padding: 2rem 0;
+}
+
+
+main h2 {
+  color: rgb(0, 136, 132);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: xx-large;
+}
+
+main p {
+  margin-bottom: 1.5rem;
+}
+
+.presentation-text {
+  text-align: left;
 }
 
 
@@ -18,37 +45,20 @@ body {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.main-image {
-  width: 100%;
-  height: 30%;
-  background-image: url(./assets/course-de-chevaux.jpg);
+  padding-inline: 2rem;
 }
 
 /* Header */
+
 header {
   background-color: #008884;
   color: white;
-  padding: 0.7rem 0;   /* Header largeur*/
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/*@media (max-width: 800px) {
-  header{
-  background-color: rgb(0, 136, 132);
-  color: rgb(0, 0, 0);
   padding: 0.7rem 0;
+  /* Header largeur*/
   display: flex;
   align-items: center;
   justify-content: space-between;
-  }
 }
-*/
 
 header h1 {
   margin-bottom: 0.3rem;
@@ -58,21 +68,74 @@ header h1 {
 
 .nav-toggle {
   display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  margin-right: 2rem;
-  z-index: 1001;
-}
-.nav-toggle-icon {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
 }
 
+nav {
+  flex: 1;
+  /* Navigation takes remaining space */
+  display: flex;
+  justify-content: center;
+  /* Center nav horizontally */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  /* Add horizontal space between items */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  color: #88f3ea;
+  background-color: transparent;
+  /* Remove background on hover */
+  border-radius: 0;
+  text-decoration: none;
+  /* Remove underline on hover */
+  box-shadow: none;
+}
+
+.header-spacer {
+  width: 160px;
+  /* ou la même largeur que le logo */
+  height: 1px;
+  /* invisible, juste pour l'espace */
+  flex-shrink: 0;
+}
+
+.logo-link {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 160px;
+  /* Scales down on small screens  ///   je pose ça là: max-width: 20vw;*/
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Burger menu */
+
 @media (max-width: 970px) {
+  nav {
+    position: relative;
+  }
+
   .nav-toggle {
     display: block;
     position: absolute;
@@ -84,11 +147,12 @@ header h1 {
     border: none;
     cursor: pointer;
   }
+
   header {
     position: relative;
   }
 
-    nav ul.container {
+  nav ul.container {
     position: absolute;
     top: 60px;
     left: 50%;
@@ -116,8 +180,10 @@ header h1 {
   nav li {
     width: 100%;
     display: flex;
-    align-items: center;         /* Vertically center the child */
-    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    /* Vertically center the child */
+    justify-content: flex-start;
+    /* Align items to the left */
     border-bottom: 1px solid #e0e0e0;
   }
 
@@ -126,13 +192,15 @@ header h1 {
   }
 
   nav a {
-    flex: 1;                     /* Fills the li */
+    flex: 1;
+    /* Fills the li */
     display: flex;
-    align-items: center;         /* Vertically center the text */
+    align-items: center;
+    /* Vertically center the text */
     padding: 1rem 1.25rem;
     font-size: 1rem;
     font-weight: 600;
-    color: #222 !important;
+    color: #333 !important;
     text-align: left;
     text-decoration: none;
     transition: background 0.2s ease, color 0.2s ease;
@@ -142,71 +210,9 @@ header h1 {
     background: #e0f7f6;
     color: #008884;
   }
-
-  nav {
-    position: relative;
-  }
 }
 
-nav {
-  flex: 1; /* Navigation takes remaining space */
-  display: flex;
-  justify-content: center;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 2rem; /* Add horizontal space between items */
-}
-
-nav {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* Center nav horizontally */
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  color: #88f3ea;
-  background-color: transparent; /* Remove background on hover */
-  border-radius: 0;
-  text-decoration: none;         /* Remove underline on hover */
-  box-shadow: none;
-}
-
-/* Main Content */
-main {
-  padding: 2rem 0;
-}
-
-
-main h2 {
-  color: rgb(0, 136, 132);
-  margin-bottom: 0.5rem;
-  text-align: center;
-  font-size: xx-large;
-}
-
-main p {
-  margin-bottom: 1.5rem;
-  text-align: justify;
-}
-
-.presentation-text {
-  text-align: left;
-}
+/* Divider */
 
 hr {
   color: rgb(0, 136, 132);
@@ -215,34 +221,17 @@ hr {
   margin-block: 2.5rem;
 }
 
-.header-spacer {
-  width: 160px; /* ou la même largeur que le logo */
-  height: 1px; /* invisible, juste pour l'espace */
-  flex-shrink: 0;
-}
+/* Container des cours */
 
-.logo-link {
-  margin-left: 2rem;
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  max-width: 160px;   /* Scales down on small screens  ///   je pose ça là: max-width: 20vw;*/
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Container des cours*/
-.cours-box {
+.dual-cours-box {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin-bottom: 2rem; /* espace entre les lignes de cours */
+  margin-bottom: 2rem;
+  /* espace entre les lignes de cours */
 }
 
-.box-cours {
+.single-cours-box {
   flex: 1 1 300px;
   max-width: 400px;
   min-width: 180px;
@@ -255,43 +244,47 @@ hr {
   align-items: center;
 }
 
-.cours-title {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-  /*Responsive sur mobile*/
+/* Container des cours */
+/* sur mobile          */
 @media (max-width: 800px) {
-  .cours-box {
+  .dual-cours-box {
     flex-direction: column;
     align-items: center;
   }
-  .box-cours {
+
+  .single-cours-box {
     width: 90%;
     max-width: 400px;
   }
 }
 
-.box-cours .image {
-  width: 100%;      /* Image aussi large que le contenu */
-  max-width: 100%;  /* Ne dépasse pas la box */
+.cours-title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.single-cours-box .image {
+  width: 100%;
+  /* Image aussi large que le contenu */
+  max-width: 100%;
+  /* Ne dépasse pas la box */
   height: auto;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
 
-.box-cours .description {
-    margin: 0.7rem 0 0.5rem;
-    text-align: justify;
-    flex: 1;
-    width: 100%;
+.single-cours-box .description {
+  margin: 0.7rem 0 0.5rem;
+  text-align: justify;
+  flex: 1;
+  width: 100%;
 }
 
-.box-cours .button {
+.single-cours-box .button {
   display: inline-block;
   padding: 12px 24px;
-  border-radius: 12px;            /* Arrondi des boutons*/
-  border-color: #00888300;
+  border-radius: 24px;
+  /* Arrondi des boutons*/
   background-color: #008884;
   color: white;
   text-decoration: none;
@@ -300,7 +293,7 @@ hr {
   transition: background-color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.box-cours .button:hover{
+.single-cours-box .button:hover {
   background-color: #1eccc6;
 }
 
@@ -310,14 +303,16 @@ hr {
   height: 4px;
   width: 60px;
   background-color: rgb(0, 136, 132);
-  margin: 0.5rem auto 2rem auto; /* 0.5rem above, 2rem below */
+  margin: 0.5rem auto 2rem auto;
+  /* 0.5rem above, 2rem below */
   border-radius: 2px;
 }
 
 /*Cours styling*/
 .cours {
   display: flex;
-  align-items: center;   /* Center image and text vertically */
+  align-items: center;
+  /* Center image and text vertically */
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -339,15 +334,15 @@ hr {
 
 #description p {
   width: 100%;
-  text-align: justify;
 }
 
 #description .button {
-  margin: 1.5rem auto 0 auto; /* Top margin, auto left/right centers it */
+  margin: 1.5rem auto 0 auto;
+  /* Top margin, auto left/right centers it */
   display: inline-block;
   padding: 12px 24px;
-  border-radius: 12px;            /* Arrondi des boutons*/
-  border-color: #00888300;
+  border-radius: 24px;
+  /* Arrondi des boutons*/
   background-color: #008884;
   color: white;
   text-decoration: none;
@@ -356,7 +351,7 @@ hr {
   transition: background-color 0.3s ease, text-decoration 0.3s ease;
 }
 
-#description .button:hover{
+#description .button:hover {
   background-color: #1eccc6;
 }
 
@@ -366,6 +361,7 @@ hr {
     flex-direction: column;
     align-items: center;
   }
+
   .cours .image {
     max-width: 90vw;
     margin-bottom: 1rem;
@@ -374,91 +370,87 @@ hr {
 
 /*Accordéon de la page insriptions*/
 table.accordeon-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-  }
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
 
-  .accordeon-table td {
-    border: 1px solid #ccc;
-    padding: 0;
-  }
+.accordeon-table td {
+  border: 1px solid #ccc;
+  padding: 0;
+}
 
-  
-  .accordeon-table tr:first-child td {
-    background-color: #fff;
-    color: #000;
-    text-align: left;
-  }
 
-  details {
-    width: 100%;
-    padding: 10px 15px;
-    cursor: pointer;
-    text-align: left;
-    font-weight: normal;
-  }
+.accordeon-table tr:first-child td {
+  background-color: #fff;
+  text-align: left;
+}
 
-  summary {
-    font-weight: bold;
-    color: rgb(0, 136, 132);
-    font-size: 16px;
-    text-align: left;
-    display: block;
-    font-weight: normal;
-  }
+details {
+  width: 100%;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: normal;
+}
 
-  summary::marker {
-    text-align: left;
-  }
+summary {
+  font-weight: bold;
+  color: rgb(0, 136, 132);
+  font-size: 16px;
+  text-align: left;
+  display: block;
+  font-weight: normal;
+}
 
-  details[open] {
-    background-color: #f0fdfa;
-  }
+summary::marker {
+  text-align: left;
+}
 
-  details p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
-    text-align: justify;
-  }
+details[open] {
+  background-color: #f0fdfa;
+}
+
+details p {
+  margin-top: 10px;
+  font-size: 14px;
+}
 
 /*Tableau des documents*/
 table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #333;
-  }
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
 
-  th, td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: justify;
-    vertical-align: top;
-    background-color: #fff;
-  }
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: justify;
+  vertical-align: top;
+  background-color: #fff;
+}
 
-  tr:first-child td {
-    background-color: rgb(0, 136, 132);
-    color: white;
-    font-weight: bold;
-    text-align: center;
-  }
+tr:first-child td {
+  background-color: rgb(0, 136, 132);
+  font-weight: bold;
+  text-align: center;
+}
 
-  a {
-    color: rgb(0, 136, 132);
-    text-decoration: none;
-  }
+a {
+  color: rgb(0, 136, 132);
+  text-decoration: none;
+}
 
-  a:hover {
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  td {
-    text-align: left;
-  }
+td {
+  text-align: left;
+}
 
 /*Lieux*/
 .lieux-box {
@@ -486,6 +478,7 @@ table {
   .lieux-box {
     flex-direction: row;
   }
+
   .lieu {
     flex-basis: calc(50% - 2rem);
     max-width: calc(50% - 2rem);
@@ -502,7 +495,6 @@ table {
 
 /* Adresse justifiée */
 .lieu p {
-  text-align: justify;
   margin-bottom: 1rem;
 }
 
@@ -522,14 +514,20 @@ table {
 #haWidget {
   display: block;
   width: 100%;
-  max-width: 1100px;   /* Same as .container */
-  margin: 2rem auto;   /* Center and add space above/below */
+  max-width: 1100px;
+  /* Same as .container */
+  margin: 2rem auto;
+  /* Center and add space above/below */
   border: none;
-  height: 3000px;      /* Adjust this value until no scroll bar appears */
+  height: 3000px;
+  /* Adjust this value until no scroll bar appears */
   box-sizing: border-box;
-  background: #f7ffff; /* Optional: match your page background */
-  border-radius: 8px;  /* Optional: match your box style */
-  box-shadow: 0 2px 8px #0001; /* Optional: subtle shadow */
+  background: #f7ffff;
+  /* Optional: match your page background */
+  border-radius: 8px;
+  /* Optional: match your box style */
+  box-shadow: 0 2px 8px #0001;
+  /* Optional: subtle shadow */
 }
 
 /*Page Titles*/
