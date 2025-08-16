@@ -222,6 +222,93 @@ nav a:hover {
   }
 }
 
+/* Hero Image */
+
+.hero {
+  height: 100vh; /* full screen height en théorie */
+  background-image: url('assets/course_de_chevaux.jpg'); 
+  background-attachment: fixed; /* key for parallax */
+  background-position: center 50%; /* Base center image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  font-size: 3rem;
+}
+
+/* Base image avec le fade bleu */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* bigger than container for movement */
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 216, 206, 0.089) 0%,    /* fully transparent at top */
+    rgba(11, 188, 201, 0.514) 100%  /* soft teal fade at bottom */
+  );
+  pointer-events: none; /* keeps it unclickable */
+  z-index: 1;  /* Keep la priorité du burger sur la hero image*/
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* mobile fallback */
+  .hero::before {
+    background-attachment: scroll; /* lets it move naturally */
+  }
+}
+
+/* Fade animation */
+
+.fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, white 100%);
+  opacity: 0; /* invisible au top */
+  pointer-events: none;
+}
+
+
+/* Regular content sections */
+
+.content {
+    padding: 4rem;
+    background: white;
+    color: #333;
+}
+  .content:nth-child(even) {
+    background: #f5f5f5;
+}
+
+
+/* Hero Text */
+
+#hero-text {
+  order: -1;  /* le force au dessus du divider */
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 2;
+  margin-top: 30vh; /* Push le text eu milieu */
+}
+
+.hero hr {
+  width: 10%;
+  margin: 1rem 0;
+}
+
 /* Divider */
 
 hr {

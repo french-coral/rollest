@@ -40,11 +40,39 @@
     <div class="header-spacer"></div> <!-- Permet de center la nav malgé le logo-->
   </header>
 
+<section class="hero">
+  <div id="hero-text">Roller Club de L'Est Lyonnais</div>
+  <hr>
+  <div class="fade"></div>
+</section>  
+
+<script>
+    window.addEventListener("scroll", () => {
+      const scrolled = window.scrollY;
+      const hero = document.querySelector(".hero");
+
+      // Base offset à 50%, plus un parallax shift (jsp c'est quoi)
+      const offset = 50 + scrolled * 0.15; // adjust 0.15 pour plus ou moins de movement, sur pc ca passe bien
+      hero.style.backgroundPosition = `center ${offset}%`;
+    });
+
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const maxScroll = 300; // à partir de combien de px le fade est max
+      const fade = document.querySelector('.fade');
+
+      let opacity = scrollTop / maxScroll;
+      if (opacity > 1) opacity = 1;
+      
+      fade.style.opacity = opacity;
+    });
+
+</script>
 
   <!-- Main Content -->
   <main class="container">
     <br>
-
     <section>
       <h2>Qui sommes-nous?</h2>
       <hr />
