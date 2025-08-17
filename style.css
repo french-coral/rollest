@@ -122,7 +122,11 @@ nav a:hover {
 }
 
 .logo-link {
-  margin-left: 2rem;
+  /* margin-left: 5rem; */
+  margin-left: 5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+
   display: flex;
   align-items: center;
 }
@@ -227,7 +231,7 @@ nav a:hover {
 .hero {
   height: 100vh; /* full screen height en théorie */
   background-image: url('assets/course_de_chevaux.jpg'); 
-  background-attachment: fixed; /* key for parallax */
+  background-attachment: fixed; /* key for parallax */ 
   background-position: center 50%; /* Base center image */
   background-repeat: no-repeat;
   background-size: cover;
