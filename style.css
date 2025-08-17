@@ -65,6 +65,7 @@ main p {
 
 header {
   background-color: #008884;
+  font-size: large;
   color: white;
   padding: 0.7rem 0;
   /* Header largeur*/
@@ -584,7 +585,7 @@ td {
 }
 
 /* Maximum 2 lieux per line */
-@media (min-width: 801px) {
+@media (min-width: 800px) {
   .lieux-box {
     flex-direction: row;
   }
@@ -647,6 +648,45 @@ td {
   justify-content: center;
   padding-top: 3rem;
 }
+
+/* Liens réseaux sociaux */
+
+.social-header{
+  margin-right: 2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links a {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  color: inherit;
+}
+
+.social-links svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  transition: color 0.3s, fill 0.3s;
+}
+
+/* Hover couleurs */
+.social-links a[aria-label="Facebook"]:hover { color: rgb(49, 214, 200); }
+.social-links a[aria-label="Instagram"]:hover { color: rgb(49, 214, 200); }
+.social-links a[aria-label="Email"]:hover { color: rgb(49, 214, 200); }
+
+@media (max-width: 970px) {
+  .social-header{
+    display: none;
+  }
+}
+
 
 /* Footer */
 footer {
