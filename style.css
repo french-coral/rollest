@@ -5,7 +5,15 @@
   box-sizing: border-box;
 }
 
+html, body { 
+  height: 100%; 
+  margin: 0; 
+}
+
 body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   background-color: rgb(246, 255, 255);
   /* Secondary color */
@@ -646,7 +654,7 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem 0;
-  margin-top: 2rem;
+  margin-top: auto;
 }
 
 footer p {

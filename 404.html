@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roller club de L'Est Lyonnais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="assets/logos/Roll_Est_RVB_nobg.png" alt="Roll'Est Logo" class="logo-img" />
+    </a>
+    <a class="nav-toggle" aria-label="Ouvrir le menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </a>
+    <script>
+      document.querySelector('.nav-toggle').addEventListener('click', function () {
+        document.querySelector('nav ul.container').classList.toggle('open');
+      });
+    </script>
+    <!-- Navigation -->
+    <nav>
+      <ul class="container">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#les-cours">Les cours</a></li>
+        <li><a href="#les-lieux">Les lieux</a></li>
+        <li><a href="inscriptions.html">Inscriptions</a></li>
+      </ul>
+    </nav>
+    <div class="header-spacer"></div> <!-- Permet de center la nav malgé le logo-->
+  </header>
+
+        <main>
+            <div class="container">
+                <h1>404</h1>
+                <p>
+                    Oups ! Cette page a pris une mauvaise trajectoire... <br>
+                    La page demandée n'existe pas ou plus.
+                    Mais pas de panique, on peut toujours faire demi-tour !
+                </p>
+                <a href="index.html" class="button">Retour à l'accueil</a>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+            <p>&copy; 2025 Roll'Est - All rights reserved.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
