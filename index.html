@@ -73,25 +73,36 @@
 
 <script>
     window.addEventListener("scroll", () => {
-      const scrolled = window.scrollY;
-      const hero = document.querySelector(".hero");
+    const scrolled = window.scrollY;
+    const hero = document.querySelector(".hero");
+    const fade = document.querySelector('.fade');
 
-      // Base offset à 50%, plus un parallax shift (jsp c'est quoi)
-      const offset = 50 + scrolled * 0.15; // adjust 0.15 pour plus ou moins de movement, sur pc ca passe bien
-      hero.style.backgroundPosition = `center ${offset}%`;
-    });
+    // Parallax
+    const offset = 50 + scrolled * 0.15;
+    hero.style.backgroundPosition = `center ${offset}%`;
 
+    // Hauteur totale de la hero
+    const heroHeight = hero.offsetHeight;
 
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const maxScroll = 300; // à partir de combien de px le fade est max
-      const fade = document.querySelector('.fade');
+    // À partir de quel moment commencer le fade (ex: dernier 20% de la hero)
+    const fadeStart = heroHeight * 0.8;
+    const fadeEnd   = heroHeight;
 
-      let opacity = scrollTop / maxScroll;
-      if (opacity > 1) opacity = 1;
-      
-      fade.style.opacity = opacity;
-    });
+    let beforeOpacity = 1; // gradient bleu visible par défaut
+
+    if (scrolled >= fadeStart) {
+      beforeOpacity = 1 - (scrolled - fadeStart) / (fadeEnd - fadeStart);
+      if (beforeOpacity < 0) beforeOpacity = 0;
+    }
+
+    hero.style.setProperty('--before-opacity', beforeOpacity);
+
+    // Blanc qui fade toujours normalement
+    const maxScroll = 300;
+    let fadeOpacity = scrolled / maxScroll;
+    if (fadeOpacity > 1) fadeOpacity = 1;
+    fade.style.opacity = fadeOpacity;
+  });
 
 </script>
 
