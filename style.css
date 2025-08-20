@@ -797,6 +797,19 @@ td {
 .card ul { margin: 0; padding-left: 1.2rem; }
 .card li { margin: .3rem 0; }
 
+/* Test pour les palmares */
+
+/* .card .badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.badge.gold { background: #ffd700; color: #000; }
+.badge.silver { background: #c0c0c0; color: #000; }
+.badge.bronze { background: #cd7f32; color: #fff; } */
     
 /* Footer */
 footer {
