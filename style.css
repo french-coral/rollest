@@ -277,11 +277,14 @@ nav a:hover {
   z-index: 1;  /* Keep la priorité du burger sur la hero image*/
 }
 
+/* On touch devices: no parallax, no white fade, keep gradient static */
 @media (hover: none) and (pointer: coarse) {
-  /* mobile fallback */
-  .hero::before {
-    background-attachment: scroll; /* lets it move naturally */
+  .hero { 
+    background-attachment: scroll; 
+    background-position: center center; 
   }
+  .fade { display: none; }                /* remove the white fade */
+  .hero::before { opacity: 1 !important; }/* keep the teal overlay visible */
 }
 
 /* Fade animation */
