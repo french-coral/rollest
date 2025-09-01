@@ -498,6 +498,120 @@ hr {
   transition: transform 0.3s ease;
 }
 
+/* Infos cards */
+
+.info-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0002;
+  margin: 2rem 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+  box-sizing: border-box;
+  cursor: pointer; /* gueule d'un truc clickable */
+}
+
+.info-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.info-title {
+  text-align: left;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #008884;
+}
+
+.info-date {
+  display: block;
+  font-size: 0.95rem;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 1rem;
+  margin-top: -0.5rem;
+  text-align: left;
+}
+
+.info-text {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: justify;
+}
+
+.info-image {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+  margin-left: 2rem;
+  object-fit: cover;
+}
+
+/* Responsive: stack l'image sous le texte on mobile */
+@media (max-width: 800px) {
+  .info-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  .info-image {
+    margin: 1.5rem auto 0 auto;
+    max-width: 90vw;
+  }
+}
+
+/* Infos Cards Button*/
+
+.info-text-wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: max-height ease;
+}
+
+/* 
+.info-text-wrapper.collapsed {
+  max-height: 15em;   Ligne max avant de collapse // Testing srry
+}
+*/
+
+.info-text-wrapper.expanded {
+  max-height: 1000em;
+}
+
+.info-text-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3em;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), #fff 80%);
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.info-text-wrapper.expanded::after {
+  opacity: 0;
+}
+
+.info-content .button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 24px;
+  /* Arrondi des boutons*/
+  background-color: #008884;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.info-content .button:hover {
+  background-color: #1eccc6;
+}
 
 /*Accordéon de la page insriptions*/
 table.accordeon-table {
