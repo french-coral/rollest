@@ -342,6 +342,14 @@ hr {
   margin-block: 2.5rem;
 }
 
+/* Highligher */
+
+.highlight {
+    background-color: #ffff00; 
+    padding: 2px 4px; 
+    border-radius: 3px;
+}
+
 /* Container des cours */
 
 .dual-cours-box {
