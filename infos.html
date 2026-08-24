@@ -10,6 +10,31 @@
 </head>
 
 <body>
+    	<!-- Bandeau d'annonce (persistant, indépendant du menu) -->
+	<div class="announcement-banner" id="announcement-banner">
+		<span>🛼 Cours d'essais les samedis 12 et 19 septembre 2026.</span>
+	</br>
+	</br>
+
+		<span>📆 Forum des associations Genas et Meyzieu le samedi 5 septembre 2026.</span>
+		<button class="banner-close" id="banner-close" aria-label="Fermer le bandeau">&times;</button>
+	</div>
+
+	<script>
+		(function () {
+			var banner = document.getElementById('announcement-banner');
+			var closeBtn = document.getElementById('banner-close');
+			// Clé basée sur le texte du bandeau : si on changes le message plus tard
+			// var key = 'bannerDismissed_' + banner.textContent.trim().slice(0, 50);
+			// if (localStorage.getItem(key)) {
+			// 	banner.style.display = 'none';
+			// }
+			closeBtn.addEventListener('click', function () {
+				banner.style.display = 'none';
+				// localStorage.setItem(key, '1');
+			});
+		})();
+	</script>
 
   <!-- Header -->
   <header>
@@ -66,11 +91,61 @@
         <main>
 
             <h1 class="title">Informations Club</h1>
-            <hr />
+            <hr/>
 
             <div class="container">
 
-                <!-- Fix Genas 2025 -->
+                <!-- Forum Associations 2026 - 2027 -->
+                <div class="large-card info-card">
+                    <div class="info-content">
+                        <h2 class="info-title">Forums des Associations</h2>
+                        <span class="info-date">Publié le 24/08/2026</span>
+                        <div class="info-text-wrapper collapsed">
+                            <p class="info-text">
+                                Bonne rentrée à tous.<br/>
+                                En ce début d'année 2026 on sera aux forums des associations de <strong>Genas</strong> et <strong>Meyzieu</strong>.<br>
+                                Que ce soit pour des petites questions, des renseignements, ou simplement pour faire coucou, on sera là pour y répondre !<br/>
+                                <br/>
+                                - Les cours reprennent dès le <strong>12 septembre</strong>. <br/>
+                                - Le <strong>5 septembre</strong> nous serons aux Forums de <strong>Meyzieu</strong> et <strong>Genas</strong>.<br/>
+                                - Les cours d'essais sont les 2 premiers cours, les <strong>samedis 12 et 19 septembre</strong>.
+                                <br/>
+                            </p>
+                            <a href="rollest.fr/inscriptions.html" class="button">Inscriptions</a>
+                        </div>
+                    </div>
+                    <img src="assets/infos/forum_assos_2026.jpg" alt="forum-2026-2027" class="info-image">
+                </div>
+
+
+                <!-- Ouverture Inscriptions 2026 - 2027 -->
+                <div class="large-card info-card">
+                    <div class="info-content">
+                        <h2 class="info-title">Inscriptions 2026-2027</h2>
+                        <span class="info-date">Publié le 11/08/2026</span>
+                        <div class="info-text-wrapper collapsed">
+                            <p class="info-text">
+                                Enfin ! On ouvre les inscirptions pour cette saison 2026 - 2027.<br/>
+                                Le club ouvre cette année l'<strong>École de Roller</strong>, l'<strong>Urban Freestyle</strong> et l'<strong>Enduro</strong>.<br/> 
+                                Les inscriptions peuvent se faire directement sur le site ou via <strong>HelloAsso</strong>.<br/>
+                                On espérant vous trouver nombreux sur le terrain avec les roues aux pieds. <br/>
+                                <br/>
+                                - Les cours reprennent dès le <strong>12 septembre</strong>. <br/>
+                                - Le <strong>5 septembre</strong> nous serons aux Forums de <strong>Meyzieu</strong> et <strong>Genas</strong>.<br/>
+                                - Les cours d'essais sont les 2 premiers cours, les <strong>samedis 12 et 19 septembre</strong>.
+                                <br/>
+                            </p>
+                            <a href="https://www.helloasso.com/associations/esga-roller/adhesions/adhesion-saison-2026-2027" class="button">HelloAsso</a>
+                            <!-- Just a space -->
+                            <span>&nbsp</span>
+                            <a href="rollest.fr/inscriptions.html" class="button">Inscriptions</a>
+                        </div>
+                    </div>
+                    <img src="assets/infos/inscriptions-thumbnail-site-2026-2027.png" alt="inscriptions-2026-2027" class="info-image">
+                </div>
+
+
+                <!-- Fin d'année 2026 -->
                 <div class="large-card info-card">
                     <div class="info-content">
                         <h2 class="info-title">Clap de fin pour cette année 2025-2026 !</h2>

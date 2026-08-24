@@ -12,6 +12,31 @@
 </head>
 
 <body>
+	<!-- Bandeau d'annonce (persistant, indépendant du menu) -->
+	<div class="announcement-banner" id="announcement-banner">
+		<span>🛼 Cours d'essais les samedis 12 et 19 septembre 2026.</span>
+	</br>
+	</br>
+
+		<span>📆 Forum des associations Genas et Meyzieu le samedi 5 septembre 2026.</span>
+		<button class="banner-close" id="banner-close" aria-label="Fermer le bandeau">&times;</button>
+	</div>
+
+	<script>
+		(function () {
+			var banner = document.getElementById('announcement-banner');
+			var closeBtn = document.getElementById('banner-close');
+			// Clé basée sur le texte du bandeau : si on changes le message plus tard
+			// var key = 'bannerDismissed_' + banner.textContent.trim().slice(0, 50);
+			// if (localStorage.getItem(key)) {
+			// 	banner.style.display = 'none';
+			// }
+			closeBtn.addEventListener('click', function () {
+				banner.style.display = 'none';
+				// localStorage.setItem(key, '1');
+			});
+		})();
+	</script>
 
   <!-- Header -->
   <header>

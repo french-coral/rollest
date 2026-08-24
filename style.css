@@ -62,6 +62,50 @@ main p {
 }
 }
 
+
+/* Bandeau d'annonce persistant */
+
+.announcement-banner {
+  position: sticky;
+  top: 0;
+  z-index: 1200; /* au-dessus du header (1000) et du burger (1100) */
+  background-color: #ffb703;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 0.65rem 2.75rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.announcement-banner a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.announcement-banner .banner-close {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+@media (max-width: 970px) {
+  .announcement-banner {
+    padding: 0.6rem 2.25rem;
+    font-size: 0.85rem;
+  }
+}
+
+
+
 /* Header */
 
 header {
